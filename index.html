@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>get absolute url</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<style type="text/css">
+body,div,canvas,img{
+    margin:0;
+    padding:0;
+    border:0;
+}
+html,body{
+    height:100%;
+}
+input{
+    width:240px;
+    padding:0 5px;
+    height:30px;
+}
+button{
+    height:30px;
+}
+#wrap{
+    padding:50px;
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+    <input type="url" id="be" value="abs.jpg" placeholder="相对地址" />
+    转换后
+    <input type="url" id="af" placeholder="绝对地址" />
+    <button onclick="$('af').value=getAbsUrl($('be').value);">GET!</button>
+</div>
+<script type="text/javascript" src="src/getabsurl.js"></script>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+</script>
+</body>
+</html>
